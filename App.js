@@ -5,19 +5,37 @@ import GoalInput from './components/GoalInput';
 
 export default function App() {
 	const [courseGoals, setCourseGoals] = useState([]);
+	const [isVisible, setIsVisible] = useState(false);
+
+	const startAddGoalHandler = () => {
+		setIsVisible(true);
+	};
+	const endAddGoalHanlder = () => {
+		setIsVisible(false);
+	};
 
 	const addGoalHandler = (enteredGoalText) => {
 		setCourseGoals([
 			...courseGoals,
 			{ id: Math.random().toString(), text: enteredGoalText },
 		]);
+		endAddGoalHanlder();
 	};
 	const deleteGoalHandler = (id) => {
 		setCourseGoals((prev) => prev.filter((goal) => goal.id !== id));
 	};
 	return (
 		<View style={styles.appContainer}>
-			<GoalInput onAddGoal={addGoalHandler} />
+			<Button
+				title='Add new goal'
+				color='#5e0acc'
+				onPress={startAddGoalHandler}
+			/>
+			<GoalInput
+				isVisible={isVisible}
+				onAddGoal={addGoalHandler}
+				onCancel={endAddGoalHanlder}
+			/>
 			<View style={styles.goalsContainer}>
 				<FlatList
 					data={courseGoals}
@@ -41,29 +59,7 @@ const styles = StyleSheet.create({
 		paddingTop: 50,
 		paddingHorizontal: 16,
 	},
-	inputContainer: {
-		flex: 1,
-		flexDirection: 'row',
-		justifyContent: 'space-between',
-		alignItems: 'center',
-		marginTop: 20,
-	},
-	textInput: {
-		borderWidth: 1,
-		borderColor: '#cccccc',
-		width: '75%',
-		padding: 5,
-	},
 	goalsContainer: {
 		flex: 9,
-	},
-	goalItem: {
-		margin: 8,
-		borderRadius: 6,
-		backgroundColor: '#5e0acc',
-		padding: 8,
-	},
-	goalItemText: {
-		color: '#fff',
 	},
 });
