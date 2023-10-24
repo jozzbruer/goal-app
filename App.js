@@ -2,6 +2,7 @@ import { useState } from 'react';
 import { Button, FlatList, StyleSheet, TextInput, View } from 'react-native';
 import GoalItem from './components/GoalItem';
 import GoalInput from './components/GoalInput';
+import { StatusBar } from 'expo-status-bar';
 
 export default function App() {
 	const [courseGoals, setCourseGoals] = useState([]);
@@ -25,31 +26,34 @@ export default function App() {
 		setCourseGoals((prev) => prev.filter((goal) => goal.id !== id));
 	};
 	return (
-		<View style={styles.appContainer}>
-			<Button
-				title='Add new goal'
-				color='#5e0acc'
-				onPress={startAddGoalHandler}
-			/>
-			<GoalInput
-				isVisible={isVisible}
-				onAddGoal={addGoalHandler}
-				onCancel={endAddGoalHanlder}
-			/>
-			<View style={styles.goalsContainer}>
-				<FlatList
-					data={courseGoals}
-					renderItem={(itemData) => {
-						return (
-							<GoalItem
-								onDeleteGoalItem={deleteGoalHandler}
-								data={itemData.item}
-							/>
-						);
-					}}
+		<>
+			<StatusBar style='light' />
+			<View style={styles.appContainer}>
+				<Button
+					title='Add new goal'
+					color='#a065ec'
+					onPress={startAddGoalHandler}
 				/>
+				<GoalInput
+					isVisible={isVisible}
+					onAddGoal={addGoalHandler}
+					onCancel={endAddGoalHanlder}
+				/>
+				<View style={styles.goalsContainer}>
+					<FlatList
+						data={courseGoals}
+						renderItem={(itemData) => {
+							return (
+								<GoalItem
+									onDeleteGoalItem={deleteGoalHandler}
+									data={itemData.item}
+								/>
+							);
+						}}
+					/>
+				</View>
 			</View>
-		</View>
+		</>
 	);
 }
 
