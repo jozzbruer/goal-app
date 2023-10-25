@@ -7,8 +7,7 @@ The Goal App is a simple React Native application built using the Expo framework
 ## Features
 
 - Create new tasks with a title and optional description.
-- Mark tasks as completed.
-- Edit existing tasks to update their details.
+
 - Delete tasks that are no longer needed.
 - User-friendly interface for easy navigation and task management.
 
@@ -27,7 +26,7 @@ Before running the Goal App, ensure you have the following installed on your dev
 1. Clone the repository to your local machine:
 
    ```bash
-   git clone https://github.com/yourusername/goal-app.git
+   git clone https://github.com/jozzbruer/goal-app.git
    ```
 
 2. Navigate to the project directory:
