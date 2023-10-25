@@ -3,14 +3,11 @@
 ## Overview
 
 The Goal App is a simple React Native application built using the Expo framework. It serves as a basic todo application, allowing users to create, edit, and delete tasks to help them stay organized and achieve their goals.
-![Simulator Screenshot - iPhone 15 Pro Max - 2023-10-24 at 15 28 41](https://github.com/jozzbruer/goal-app/assets/21253158/11c04f77-4362-4b28-b28a-295bf774a2c2)
 
-![Simulator Screenshot - iPhone 15 Pro Max - 2023-10-24 at 15 29 01](https://github.com/jozzbruer/goal-app/assets/21253158/55f6abaf-9d03-4cee-8f5b-547b9d5a3ab0)
-![Screenshot_1698186444](https://github.com/jozzbruer/goal-app/assets/21253158/e15fa8e1-b8b2-42bc-82f1-77dc9aec91c2)
-![Screenshot_1698186480](https://github.com/jozzbruer/goal-app/assets/21253158/23984978-4d67-4739-908e-0af069f90a5e)
-<img src="[image1.jpg](https://github.com/jozzbruer/goal-app/assets/21253158/11c04f77-4362-4b28-b28a-295bf774a2c2)" alt="Image 1" width="300" /> <img src="[image2.jpg](https://github.com/jozzbruer/goal-app/assets/21253158/e15fa8e1-b8b2-42bc-82f1-77dc9aec91c2)" alt="Image 2" width="300" />
 
-<img src="image3.jpg" alt="Image 3" width="300" /> <img src="image4.jpg" alt="Image 4" width="300" />
+<img src="https://github-production-user-asset-6210df.s3.amazonaws.com/21253158/277842342-e15fa8e1-b8b2-42bc-82f1-77dc9aec91c2.png" alt="Image 1" width="300" /> <img src="https://github-production-user-asset-6210df.s3.amazonaws.com/21253158/277842290-11c04f77-4362-4b28-b28a-295bf774a2c2.png" alt="Image 2" width="300" />
+
+<img src="https://github-production-user-asset-6210df.s3.amazonaws.com/21253158/277842342-e15fa8e1-b8b2-42bc-82f1-77dc9aec91c2.png" alt="Image 3" width="300" /> <img src="https://github.com/jozzbruer/goal-app/assets/21253158/23984978-4d67-4739-908e-0af069f90a5e" alt="Image 4" width="300" />
 
 
 ## Features
